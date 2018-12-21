@@ -42,15 +42,20 @@ function createDeck() {
       }
     
   }
+  shuffle(deck);
   return deck;
 }
 
 // 6. Call the createDeck() function and store the results in a new variable named myDeck
+
 var myDeck = createDeck();
 
-console.log(myDeck);
 /* 7. Use a for loop to loop through the deck and list each card in the order the appear in the newly shuffled array. Use the log() method to print out a message like this, once for each card:
 "7 of ♥.︎"
 */
+
+for (var i = 0; i < myDeck.length; i++) {
+    console.log(myDeck[i][0] + " of " + myDeck[i][1] );
+}
 
 // Run your code by typing node 3_deck.js in the console below
