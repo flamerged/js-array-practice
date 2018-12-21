@@ -33,28 +33,26 @@ function createDeck() {
   var deck = [];
   // add your code below here:
   
-  for (var i = 0; i < suites.length; i++){
-      for(var j = 0; j < ranks.length; j++) {
-        var card = [];
-        card.push(ranks [j]);
-        card.push(suites[i]);
+  for (let i = 0; i < suites.length; i++){
+      for(let j = 0; j < ranks.length; j++) {
+        let card = [];
+        card.push(ranks [j], suites[i]);
         deck.push(card);
       }
     
   }
-  shuffle(deck);
-  return deck;
+  return shuffle(deck);
 }
 
 // 6. Call the createDeck() function and store the results in a new variable named myDeck
 
-var myDeck = createDeck();
+let myDeck = createDeck();
 
 /* 7. Use a for loop to loop through the deck and list each card in the order the appear in the newly shuffled array. Use the log() method to print out a message like this, once for each card:
 "7 of ♥.︎"
 */
 
-for (var i = 0; i < myDeck.length; i++) {
+for (let i = 0; i < myDeck.length; i++) {
     console.log(myDeck[i][0] + " of " + myDeck[i][1] );
 }
 

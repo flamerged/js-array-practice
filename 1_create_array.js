@@ -10,6 +10,7 @@ If your program is stuck in an infinite loop, you can break out of the program b
 // 1. Create a new array named languages that contains at least 7 programming languages.
 var languages = ["JavaScript", "HTML", "CSS", "C", "C++", "C#", "Java", "Python", "Ruby", "PHP"];
 // 2. Use console.log to display the number of elements in the array:
+console.log(languages.length);
 
 /* 3. Use console.log to list the first element from the array using an index value. */
 console.log(languages[0]);
