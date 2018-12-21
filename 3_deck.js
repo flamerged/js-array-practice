@@ -26,16 +26,29 @@ function shuffle(arr) {
 // 3. Inside the second, nested loop, create a new array named card, which is composed of a rank and a suite. For example ['King', '♥︎'].
 // 4. Push that card onto the deck array. Once both loops complete running, the deck array will hold 52 elements, and each of those elements are themselves an array.
 // 5. Finally, pass the new deck to the shuffle() function, and return the results.
+
 function createDeck() {
   var suites = ['♠︎','♣︎','♥︎','♦︎'];
-  var ranks = ['Ace','King','Queen','Jack','10','9','8','7','6','5','4', '3','2'];
+  var ranks = ['Ace','King','Queen','Jack','10','9','8','7','6','5','4','3','2'];
   var deck = [];
   // add your code below here:
   
+  for (var i = 0; i < suites.length; i++){
+      for(var j = 0; j < ranks.length; j++) {
+        var card = [];
+        card.push(ranks [j]);
+        card.push(suites[i]);
+        deck.push(card);
+      }
+    
+  }
+  return deck;
 }
 
 // 6. Call the createDeck() function and store the results in a new variable named myDeck
+var myDeck = createDeck();
 
+console.log(myDeck);
 /* 7. Use a for loop to loop through the deck and list each card in the order the appear in the newly shuffled array. Use the log() method to print out a message like this, once for each card:
 "7 of ♥.︎"
 */
